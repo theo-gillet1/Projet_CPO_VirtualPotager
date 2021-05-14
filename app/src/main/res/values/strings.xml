@@ -31,6 +31,7 @@
     <!-- Fenêtre pop up détail observation -->
     <string name="Titre_Observation_Popup">Nom Observation</string>
     <string name="Description_Observation_Popup">Description Observation</string>
+    <string name="Msg_bouton_popup">Compris !</string>
 
 
 </resources>

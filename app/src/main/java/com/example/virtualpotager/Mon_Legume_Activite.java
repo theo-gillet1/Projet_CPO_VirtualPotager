@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.app.Activity;
 
 public class Mon_Legume_Activite extends AppCompatActivity {
 
     private ImageButton bouton_retour_leg;
+    private Button button_obs;
+    private Activity activity;
 
 
     @Override
@@ -29,5 +32,27 @@ public class Mon_Legume_Activite extends AppCompatActivity {
                 finish();
             }
         });
+
+        // clic sur obs
+
+        this.button_obs = (Button) findViewById(R.id.button_obs);
+        this.activity = this;
+        button_obs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Observation_Popup Popup = new Observation_Popup(activity);
+                Popup.setTitle("@string/");
+                Popup.setSubTitle("sfvge");
+                Popup.getConfirmation().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Popup.dismiss();
+                    }
+                });
+                Popup.build();
+
+            }
+        });
+
     }
 }
