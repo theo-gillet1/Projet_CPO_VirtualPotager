@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marge_default">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="box_dimen">50dp</dimen>
+
+
+</resources>

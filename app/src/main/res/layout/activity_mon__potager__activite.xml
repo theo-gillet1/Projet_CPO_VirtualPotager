@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mon_Potager_Activite">
+
+    <ImageButton
+        android:id="@+id/bouton_retour_pota"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/titre_mon_potager"
+        style="@style/Style_Titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Titre_Mon_Potager"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="388dp"
+        android:layout_height="399dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bouton_oignon_potager"
+            style="@style/Style_txt_Descrip"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/oignon_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bouton_pommedeterre_potager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/bouton_fraise_potager"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/fraise_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bouton_pommedeterre_potager"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/bouton_pommedeterre_potager"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/pommedeterre_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/bouton_supp_oignon_potager"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_croix"
+            app:layout_constraintBottom_toTopOf="@+id/bouton_oignon_potager"
+            app:layout_constraintEnd_toEndOf="@+id/bouton_oignon_potager"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/bouton_supp_patate_potager"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_croix"
+            app:layout_constraintBottom_toTopOf="@+id/bouton_pommedeterre_potager"
+            app:layout_constraintEnd_toEndOf="@+id/bouton_pommedeterre_potager"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/bouton_supp_fraise_potager"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_croix"
+            app:layout_constraintBottom_toTopOf="@+id/bouton_fraise_potager"
+            app:layout_constraintEnd_toEndOf="@+id/bouton_fraise_potager"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

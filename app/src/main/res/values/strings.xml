@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Virtual Potager</string>
+
+    <!-- Page d'accueil -->
+    <string name="Bouton_Rechercher_Accueil">Rechercher</string>
+    <string name="Bouton_Potager_Accueil">Mon Potager</string>
+
+    <!-- Page de recherche -->
+    <string name="Solution_Recherche">Nom d\'un légume</string>
+
+    <!-- Page potager -->
+    <string name="Titre_Mon_Potager">Mon Potager</string>
+    <string name="Nom_Légume_Potager">Nom d\'un Légume</string>
+
+    <!-- Page du légume -->
+    <string name="Titre_Objectif_Legume">Objectif</string>
+    <string name="Nom_Objectif">Nom Objectif</string>
+    <string name="Titre_Observation_Legume">Observation</string>
+    <string name="Nom_Observation">Nom Observation</string>
+    <string name="Etape_Légume">Etape : </string>
+    <integer name="Numero_Etape">0</integer>
+    <string name="Nom_Du_Légume_Simulation">Nom du légume</string>
+
+    <!-- Fenêtre pop up recherche -->
+    <string name="Titre_Recherche_Popup">Nom du légume</string>
+    <string name="Description_Recherche_Popup">Description du légume</string>
+
+    <!-- Fenêtre pop up supp -->
+    <string name="Question_Supp_Popup">Etes-vous sur de vouloir enlever ce legume de votre potager</string>
+
+    <!-- Fenêtre pop up détail observation -->
+    <string name="Titre_Observation_Popup">Nom Observation</string>
+    <string name="Description_Observation_Popup">Description Observation</string>
+
+
+</resources>
