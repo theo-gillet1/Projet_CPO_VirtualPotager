@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.app.Activity;
+import android.widget.LinearLayout;
 
 public class Mon_Legume_Activite extends AppCompatActivity {
 
@@ -35,14 +36,15 @@ public class Mon_Legume_Activite extends AppCompatActivity {
 
         // clic sur obs
 
+
         this.button_obs = (Button) findViewById(R.id.button_obs);
         this.activity = this;
         button_obs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Observation_Popup Popup = new Observation_Popup(activity);
-                Popup.setTitle("@string/");
-                Popup.setSubTitle("sfvge");
+                Popup.setTitle(getResources().getString(R.string.Titre_Observation_Popup));
+                Popup.setSubTitle(getResources().getString(R.string.Description_Observation_Popup));
                 Popup.getConfirmation().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

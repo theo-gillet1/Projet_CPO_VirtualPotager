@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Mon_Potager_Activite extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class Mon_Potager_Activite extends AppCompatActivity {
     private ImageButton bouton_retour_pota;
     private ImageButton bouton_supp_oignon_potager;
     private Mon_Potager_Activite potager_activite;
+    private LinearLayout oignon_layout;
 
 
     @Override
@@ -79,6 +81,8 @@ public class Mon_Potager_Activite extends AppCompatActivity {
         });
 
         //fenetre Popup Supp
+
+        this.oignon_layout = (LinearLayout) findViewById(R.id.oignon_layout);
         this.bouton_supp_oignon_potager = (ImageButton) findViewById(R.id.bouton_supp_oignon_potager);
         this.potager_activite = this;
         bouton_supp_oignon_potager.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +94,9 @@ public class Mon_Potager_Activite extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(),"le légume a été déraciné !", Toast.LENGTH_SHORT).show();
+                        oignon_layout.suppressLayout(true);
+                        
+
                     }
                 });
 

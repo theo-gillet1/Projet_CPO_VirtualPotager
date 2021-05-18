@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Mon_Legume_Activite">
 
-
     <ImageButton
         android:id="@+id/bouton_retour_leg"
         android:layout_width="@dimen/box_dimen"
@@ -16,130 +15,113 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout4"
+    <TextView
+        android:id="@+id/Nom_Legume"
+        style="@style/Style_Titre"
+        android:layout_width="184dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/Nom_Du_Légume_Simulation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="100dp">
 
-
-        <TextView
-            android:id="@+id/Nom_Legume"
-            style="@style/Style_Titre"
-            android:layout_width="184dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/Nom_Du_Légume_Simulation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="170dp"
-            android:layout_height="475dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Nom_Legume">
+        <LinearLayout
+            android:layout_width="179dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/objectif_simu"
                 style="@style/Style_Titre2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Titre_Objectif_Legume"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.050000012" />
+                android:layout_gravity="center"
+                android:text="@string/Titre_Objectif_Legume" />
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
-                android:text="CheckBox"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="CheckBox" />
 
+        </LinearLayout>
 
-        </android.support.constraint.ConstraintLayout>
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="@dimen/box_dimen"
-            android:layout_height="@dimen/box_dimen"
-            android:src="@drawable/ic_etape_preced"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="@dimen/box_dimen"
-            android:layout_height="@dimen/box_dimen"
-            android:src="@drawable/ic_etape_suiv"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <EditText
-            android:id="@+id/editTextNumberDecimal"
-            android:layout_width="@dimen/box_dimen"
-            android:layout_height="@dimen/box_dimen"
-            android:layout_marginEnd="64dp"
-            android:ems="@integer/Numero_Etape"
-            android:inputType="numberDecimal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton" />
-
-        <TextView
-
-            android:id="@+id/textView5"
-            android:layout_width="@dimen/box_dimen"
-            android:layout_height="@dimen/box_dimen"
-            android:layout_marginStart="64dp"
-            android:text="@string/Etape_Légume"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2" />
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout2"
-            android:layout_width="170dp"
-            android:layout_height="475dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Nom_Legume">
+        <LinearLayout
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/observation_simu"
                 style="@style/Style_Titre2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Titre_Observation_Legume"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.050000012" />
+                android:layout_gravity="center"
+                android:text="@string/Titre_Observation_Legume" />
 
             <Button
                 android:id="@+id/button_obs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Nom_Observation"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.217" />
+                android:text="@string/Nom_Observation" />
 
-        </android.support.constraint.ConstraintLayout>
 
-    </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="114dp">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="@dimen/box_dimen"
+            android:layout_height="@dimen/box_dimen"
+            android:src="@drawable/ic_etape_preced" />
+
+        <TextView
+
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Etape_Légume" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="@integer/Numero_Etape"
+            android:inputType="numberDecimal" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/box_dimen"
+            android:layout_height="@dimen/box_dimen"
+            android:src="@drawable/ic_etape_suiv" />
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
