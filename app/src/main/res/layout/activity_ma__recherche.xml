@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ma_Recherche">
+
+    <ImageButton
+        android:id="@+id/retour_accuiel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back">
+
+    </ImageButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginVertical="100dp">
+
+        <ImageButton
+            android:id="@+id/add_oignon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/add_fraise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/add_pommedeterre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add">
+        </ImageButton>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

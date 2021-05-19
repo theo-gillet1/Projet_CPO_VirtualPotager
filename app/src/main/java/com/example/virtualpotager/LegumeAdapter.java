@@ -17,9 +17,9 @@ public class LegumeAdapter extends BaseAdapter {
     private LayoutInflater inflater;
 
     //constructeur
-    public LegumeAdapter(Context context, List<Legume> LegumeList){
+    public LegumeAdapter(Context context,List<Legume> LegumeListe){
         this.context = context;
-        this.legumeList = LegumeList;
+        this.legumeList = LegumeListe;
         this.inflater = LayoutInflater.from(context);
 
     }
@@ -52,6 +52,7 @@ public class LegumeAdapter extends BaseAdapter {
         String rssName = img + "_img";
         int resId = context.getResources().getIdentifier(rssName, "drawable", context.getPackageName());
         LegumeImage.setImageResource(resId);
+        
 
         return view;
     }

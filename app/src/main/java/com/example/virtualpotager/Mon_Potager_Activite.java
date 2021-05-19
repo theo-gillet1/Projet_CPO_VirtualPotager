@@ -1,8 +1,7 @@
 package com.example.virtualpotager;
 
-import android.content.DialogInterface;
+
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Mon_Potager_Activite extends AppCompatActivity {
 
     private Button bouton_oignon_potager;
@@ -24,6 +24,10 @@ public class Mon_Potager_Activite extends AppCompatActivity {
     private ImageButton bouton_supp_oignon_potager;
     private Mon_Potager_Activite potager_activite;
     private LinearLayout oignon_layout;
+    public List<Legume> LegumeList;
+    private  ImageButton add_oignon;
+
+
 
 
     @Override
@@ -31,18 +35,47 @@ public class Mon_Potager_Activite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon__potager__activite);
 
-
-        //Liste des Legumes
-        List<Legume> LegumeList = new ArrayList<>();
-        LegumeList.add(new Legume("oignon", "oignon"));
-        LegumeList.add(new Legume("fraise","fraise"));
-        LegumeList.add(new Legume("pomme de terre", "pommedeterre"));
+        this.add_oignon = (ImageButton) findViewById(R.id.add_oignon);
 
         //get list view
+        List<Legume> LegumeList = new ArrayList<>();
+        LegumeList.add(new Legume("oignon", "oignon"));
+        LegumeList.add(new Legume("oignon", "oignon"));
+        LegumeList.add(new Legume("fraise", "fraise"));
+        LegumeList.add(new Legume("oignon", "oignon"));
         GridView potagerGridView = findViewById(R.id.potagerGridView);
         potagerGridView.setAdapter(new LegumeAdapter(this, LegumeList));
 
 
+
+
+        //clic sur add oignon
+
+        add_oignon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LegumeList.add(new Legume("oignon", "oignon"));
+                GridView potagerGridView = findViewById(R.id.potagerGridView);
+                potagerGridView.setAdapter(new LegumeAdapter(getApplicationContext(), LegumeList));
+            }
+        });
+
+
+
+
+        //Clic sur le bouton retour
+        this.bouton_retour_pota = (ImageButton) findViewById(R.id.bouton_retour_pota);
+        bouton_retour_pota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent otherActivity = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(otherActivity);
+                finish();
+
+
+
+            }
+        });
 
     }
 }
