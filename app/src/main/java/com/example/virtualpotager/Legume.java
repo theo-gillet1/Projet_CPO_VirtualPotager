@@ -2,22 +2,24 @@ package com.example.virtualpotager;
 
 public class Legume {
 
+
+    private Integer Id;
     private String name;
     private String img;
-    public Integer Id;
 
-    public Legume(String name, String img) {
+
+    public Legume(String name, String img, int Id) {
         this.name = name;
         this.img = img;
-        this.Id = 0;
+        this.Id = Id;
     }
 
     public String getName(){return name;}
 
     public String getImg() {return img;}
 
-    public void setId(int id){
-        this.Id = id;
+    public Integer getId(){
+        return Id;
     }
 
 }
