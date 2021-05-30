@@ -1,12 +1,14 @@
 package com.example.virtualpotager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Ma_Recherche extends AppCompatActivity {
@@ -16,10 +18,12 @@ public class Ma_Recherche extends AppCompatActivity {
     private ImageButton add_oignon;
     private ImageButton add_fraise;
     private ImageButton add_pommedeterre;
+    private List<Legume> LegumeList = new ArrayList<Legume>();
 
 
 
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +33,16 @@ public class Ma_Recherche extends AppCompatActivity {
         this.add_oignon = (ImageButton) findViewById(R.id.add_oignon);
         this.add_fraise = (ImageButton) findViewById(R.id.add_fraise);
         this.add_pommedeterre = (ImageButton) findViewById(R.id.add_pommedeterre);
+        int id1 = 0;
+
+
+        //get list view
+        GlobalList globalList = (GlobalList)getApplicationContext();
+        List<Legume> LegumeList = globalList.getLegumeList();
+        globalList.setLegumeList(LegumeList);
+
 
         //Clic sur le bouton retour
-
         retour_accuiel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,43 +52,40 @@ public class Ma_Recherche extends AppCompatActivity {
             }
         });
 
-
-
-        //Clic sur add oignon;
-
+        //add oignon
         add_oignon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //LegumeListe.add(new Legume("oignon", "oignon"));
-
-
+                LegumeList.add(new Legume("oignon", "oignon",id1));
+                globalList.setLegumeList(LegumeList);
+                int id1 =+ 1;
             }
         });
 
-        //Clic sur add faise;
 
+        //add Fraise
         add_fraise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //LegumeListe.add(new Legume("fraise", "fraise"));
-                Toast.makeText(getApplicationContext(),"LegumeListe.size()",Toast.LENGTH_SHORT).show();
-
+                LegumeList.add(new Legume("fraise", "fraise",id1));
+                globalList.setLegumeList(LegumeList);
+                int id1 =+1;
             }
         });
 
-        //Clic sur add fraise;
 
+
+        //add pomme de terre
         add_pommedeterre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //LegumeListe.add(new Legume("pommedeterre", "pommedeterre"));
-                Toast.makeText(getApplicationContext(),"LegumeListe.size()",Toast.LENGTH_SHORT).show();
-
+                LegumeList.add(new Legume("Pomme de Terre", "pommedeterre",id1));
+                globalList.setLegumeList(LegumeList);
+                int id1 =+1;
             }
         });
+
+
 
 
     }

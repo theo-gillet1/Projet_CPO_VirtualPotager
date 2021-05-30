@@ -2,7 +2,9 @@ package com.example.virtualpotager;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
@@ -14,6 +16,7 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.List;
@@ -78,6 +81,7 @@ public class LegumeAdapter extends BaseAdapter {
         TextView txtnom = new TextView(context);
         ViewGroup.LayoutParams paramstxt = new ActionBar.LayoutParams(400,100);
         txtnom.setText(LegumeName);
+        txtnom.setTextAppearance(context,R.style.txt_Recherche);
         Layout.addView(txtnom);
 
 
@@ -97,22 +101,42 @@ public class LegumeAdapter extends BaseAdapter {
         Layout.addView(IMG);
 
 
-
+        //cliquer sur bouton supp
         imgsupp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                legumeList.remove(position);
-                notifyDataSetInvalidated();
+
+
+                AlertDialog.Builder PopupSup = new AlertDialog.Builder(v.getRootView().getContext());
+                PopupSup.setMessage("Voulez vous supprimer ce légume de votre potager ?");
+                PopupSup.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(context,"le légume a été déraciné !", Toast.LENGTH_SHORT).show();
+                        legumeList.remove(position);
+                        notifyDataSetInvalidated();
+
+                    }
+                });
+                PopupSup.setNegativeButton("Non", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(context,"le légume n'a pas été déraciné !", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                PopupSup.show();
             }
         });
 
+
+        //cliquer sur bouton legume
         IMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent otherActivity = new Intent(context, Mon_Legume_Activite.class);
                 otherActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(otherActivity);
-                ((Activity)context).finish();
+                //((Activity)context).finish();
             }
         });
 

@@ -6,10 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".GlobalList"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VirtualPotager">
-        <activity android:name=".Ma_Recherche"></activity>
+        <activity android:name=".Ma_Recherche" />
         <activity android:name=".Mon_Legume_Activite" />
         <activity android:name=".Mon_Potager_Activite" />
         <activity android:name=".MainActivity">
