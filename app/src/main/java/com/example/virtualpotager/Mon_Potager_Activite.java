@@ -3,7 +3,7 @@ package com.example.virtualpotager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,9 +37,6 @@ public class Mon_Potager_Activite extends AppCompatActivity {
         this.add_fraise = (ImageButton) findViewById(R.id.add_fraise);
         this.add_pommedeterre = (ImageButton) findViewById(R.id.add_pommedeterre);
         int id1 = 0;
-
-
-
 
 
 

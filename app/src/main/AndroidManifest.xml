@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VirtualPotager">
         <activity android:name=".Ma_Recherche" />
-        <activity android:name=".Mon_Legume_Activite" />
+        <activity android:name=".Mon_Legume_Activite"
+            android:parentActivityName=".Mon_Potager_Activite"/>
         <activity android:name=".Mon_Potager_Activite" />
         <activity android:name=".MainActivity">
             <intent-filter>

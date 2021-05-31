@@ -3,7 +3,7 @@ package com.example.virtualpotager;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -56,7 +56,7 @@ public class Ma_Recherche extends AppCompatActivity {
         add_oignon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LegumeList.add(new Legume("oignon", "oignon",id1));
+                LegumeList.add(new Legume("oignon", "oignon",id1,"oig"));
                 globalList.setLegumeList(LegumeList);
                 int id1 =+ 1;
             }
@@ -67,7 +67,7 @@ public class Ma_Recherche extends AppCompatActivity {
         add_fraise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LegumeList.add(new Legume("fraise", "fraise",id1));
+                LegumeList.add(new Legume("fraise", "fraise",id1,"fra"));
                 globalList.setLegumeList(LegumeList);
                 int id1 =+1;
             }
@@ -79,7 +79,7 @@ public class Ma_Recherche extends AppCompatActivity {
         add_pommedeterre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LegumeList.add(new Legume("Pomme de Terre", "pommedeterre",id1));
+                LegumeList.add(new Legume("Pomme de Terre", "pommedeterre",id1,"pdt"));
                 globalList.setLegumeList(LegumeList);
                 int id1 =+1;
             }

@@ -6,8 +6,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 public class LegumeAdapter extends BaseAdapter {
 
+    public static final String EXTRA_TEXT = "com.example.virtualpotager";
     private Context context;
     private List<Legume> legumeList;
     private LayoutInflater inflater;
     private LinearLayout Layout;
+    private String CatLegSelec;
 
     //constructeur
     public LegumeAdapter(Context context,List<Legume> LegumeListe){
@@ -56,16 +58,13 @@ public class LegumeAdapter extends BaseAdapter {
 
         view = inflater.inflate(R.layout.model_legume, null);
         this.Layout = view.findViewById(R.id.Legume_layout);
+
+        //Recuperation des infos d'un legume
         Legume CurrentLegume = getItem(position);
         String LegumeName = CurrentLegume.getName();
         String img = CurrentLegume.getImg();
-
-
-
-        //Set Id image Legume and supp legume
         int id = CurrentLegume.getId();
-
-
+        this.CatLegSelec = CurrentLegume.getCat();
 
 
         //bouton supp
@@ -133,10 +132,14 @@ public class LegumeAdapter extends BaseAdapter {
         IMG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Legume CurrentLegume = getItem(position);
+                CatLegSelec = CurrentLegume.getCat();
                 Intent otherActivity = new Intent(context, Mon_Legume_Activite.class);
+                otherActivity.putExtra(EXTRA_TEXT, CatLegSelec);
                 otherActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(otherActivity);
-                //((Activity)context).finish();
+
+                ((Activity)context).finish();
             }
         });
 
